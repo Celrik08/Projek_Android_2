@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- GridLayout untuk 3 kolom -->
+    <GridLayout
+        android:id="@+id/gridLayoutZ"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="1"
+        android:rowCount="3">
+
+        <!-- Kolom pertama -->
+        <androidx.cardview.widget.CardView
+            android:layout_height="80dp"
+            android:layout_margin="0dp"
+            android:layout_gravity="fill"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/Green">
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Kolom kedua -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="406dp"
+            android:layout_height="500dp"
+            android:layout_margin="0dp"
+            android:layout_gravity="fill"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="2dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:context=".MainActivity">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/items_main"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Kolom ketiga -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="406dp"
+            android:layout_height="80dp"
+            android:layout_margin="0dp"
+            android:layout_gravity="fill"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/Green">
+
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
+
+</RelativeLayout>
